@@ -35,6 +35,7 @@ RUN pip install XlsxWriter
 RUN pip install lxml
 RUN pip install zip
 RUN pip install biom-format
+RUN pip install zipfile
 ##############################################################
 # Software:             Regular Directories
 # Software Version:     1.0
