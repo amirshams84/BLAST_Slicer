@@ -28,13 +28,13 @@ RUN pip install numpy
 RUN pip install scipy
 RUN pip install plotly
 RUN pip install pandas
-#RUN pip install biom-format
 RUN pip install xlrd
 RUN pip install openpyxl
 RUN pip install xlwt
 RUN pip install XlsxWriter
 RUN pip install lxml
 RUN pip install zip
+RUN pip install biom-format
 ##############################################################
 # Software:             Regular Directories
 # Software Version:     1.0
@@ -57,3 +57,16 @@ RUN wget https://github.com/mothur/mothur/releases/download/v1.39.5/Mothur.linux
 RUN unzip /EXECDIR/Mothur.linux_64.zip -d /EXECDIR
 RUN rm -rf /EXECDIR/Mothur.linux_64.zip /EXECDIR/__MACOSX
 RUN chmod -R 0755 /EXECDIR/mothur
+##############################################################
+# Dockerfile Version:   1.0
+# Software:             BLAST
+# Software Version:     1.2
+# Software Website:     BLAST
+# Description:          BLAST 
+##############################################################
+
+RUN mkdir /EXECDIR/blast
+RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.6.0+-x64-linux.tar.gz -P /EXECDIR/blast
+RUN tar zxf /EXECDIR/blast/ncbi-blast-2.6.0+-x64-linux.tar.gz -C /EXECDIR/blast
+RUN rm -rf /EXECDIR/blast/ncbi-blast-2.6.0+-x64-linux.tar.gz
+RUN chmod -R 0755 /EXECDIR/blast/ncbi-blast-2.6.0+
