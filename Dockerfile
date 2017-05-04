@@ -58,3 +58,14 @@ RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2
 RUN tar zxf /EXECDIR/blast/ncbi-blast-2.6.0+-x64-linux.tar.gz -C /EXECDIR/blast
 RUN rm -rf /EXECDIR/blast/ncbi-blast-2.6.0+-x64-linux.tar.gz
 RUN chmod -R 0755 /EXECDIR/blast/ncbi-blast-2.6.0+
+##############################################################
+# Dockerfile Version:   1.0
+# Software:             simply_BLAST
+# Software Version:     1.0
+# Software Website:     .
+# Description:          python script 
+##############################################################
+RUN wget https://github.com/amirshams84/simply_BLAST/blob/master/simply_blast.pyc -P /
+RUN chmod -R 0755 /simply_blast.pyc
+ENTRYPOINT ["/bin/bash"]
+
