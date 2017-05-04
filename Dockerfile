@@ -65,7 +65,7 @@ RUN chmod -R 0755 /EXECDIR/blast/ncbi-blast-2.6.0+
 # Software Website:     .
 # Description:          python script 
 ##############################################################
-RUN wget https://github.com/amirshams84/simply_BLAST/blob/master/simply_blast.pyc -P /
+RUN wget https://github.com/amirshams84/simply_BLAST/blob/master/simply_blast.pyc?raw=true -O /simply_blast.pyc
 RUN chmod -R 0755 /simply_blast.pyc
 ENTRYPOINT ["/bin/bash"]
 
